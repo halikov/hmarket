@@ -60,7 +60,6 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-
 .card__close:hover,
 .card__close:focus {
   background-color: rgba(245,244,242,1);
@@ -88,7 +87,6 @@ input[type="radio"].visually-hidden {
   fill: rgba(196,196,196,1);
 }
 
-/* Таблица данных карточки */
 .card__content {
   display: flex;
   flex-direction: column;
@@ -113,7 +111,6 @@ input[type="radio"].visually-hidden {
   margin-top: 20px;
 }
 
-/* Apparts media изображение квартиры */
 .table {
   margin-bottom: 15px;
   border-collapse: collapse;
@@ -308,7 +305,42 @@ input[type="radio"].visually-hidden {
   .card {
     width: 712px;
   }
+
+  .card__content {
+    align-items: flex-start;
+  }
+
   .apparts__info {
     flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .apparts__media {
+    margin: 0;
+    margin-right: 32px;
+  }
+
+  .table {
+    width: 250px;
+    margin-bottom: 18px;
+  }
+
+  .apparts__details {
+    flex-direction: row;
+  }
+
+  .viewed {
+    margin: 0;
+    margin-right: 16px;
+  }
+
+  .apparts__reservation {
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .reservation__text {
+    max-width: 240px;
   }
 }
