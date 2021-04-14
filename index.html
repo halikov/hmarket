@@ -1,0 +1,74 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css">
+    <title>НМАРКЕТ компонент</title>
+  </head>
+  <body>
+    <article class="card">
+      <h2 class="visually-hidden">Карточка квартиры</h2>
+      <div class="card__inner">
+        <button class="card__close">
+          <svg class="card__close-icon" fill="none" viewBox="0 0 24 24">
+            <path fill="#B2B0AB" fill-rule="evenodd" d="M6.8 5.3a1.05 1.05 0 00-1.5 1.5l5.21 5.2-5.2 5.2a1.05 1.05 0 101.49 1.5l5.2-5.21 5.2 5.2a1.05 1.05 0 001.5-1.49L13.48 12l5.2-5.2a1.05 1.05 0 10-1.49-1.5L12 10.52l-5.2-5.2z" clip-rule="evenodd"/>
+          </svg>
+        </button>
+        <div class="card__content apparts">
+          <div class="apparts__info">
+            <div class="apparts__media">
+              <img  class="apparts__plan" src="img/draft.svg"  width="178" height="178" alt="">
+            </div>
+            <div class="apparts__desc">
+              <div class="table">
+                <h4 class="table__heading">2-к квартира</h4>
+                <div class="table__wrapper">
+                  <div class="table__field">Этаж</div>
+                  <div class="table__field">Высота потолков</div>
+                  <div class="table__value">3 из 19</div>
+                  <div class="table__value">3,2 м</div>
+                  <div class="table__field">Общая площадь</div>
+                  <div class="table__field">Отделка</div>
+                  <div class="table__value">32,24 м<sup>2</sup></div>
+                  <div class="table__value">Пердчистовая</div>
+                  <div class="table__field">Жилая площадь</div>
+                  <div class="table__field">Площадь кухни</div>
+                  <div class="table__value">22,24 м<sup>2</sup></div>
+                  <div class="table__value">14,24 м<sup>2</sup></div>
+                </div><!-- // .table wrapper -->
+              </div>
+              <div class="apparts__details">
+                <span class="viewed">
+                  Вы&nbsp;были на&nbsp;просмотре
+                </span>
+                <span class="accredited">
+                  Дом аккредитован другим банком
+                </span>
+              </div>
+            </div>
+          </div> <!-- // .card info -->
+          <div class="apparts__reservation reservation">
+            <p class="reservation__text">
+              Ваша цена по&nbsp;брони&nbsp;до 
+              <span class="reservation__untill">
+                19 сентября
+              </span>
+            </p>
+            <p class="reservation__summ">3 312 666 Р</p>
+            <p class="reservation__text">Текущая цена у&nbsp;застройщика дороже на <span class="reservation__discount">324 825 P</span></p>
+            <button class="btn">
+              <svg class="btn__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                  <path fill="#383736" fill-rule="evenodd" d="M9.68 7.56A3.99 3.99 0 006 2a4 4 0 101.56 7.68l1.13 1.13c.06.06.14.09.22.07l1.27-.25c.18-.04.33.12.3.29l-.21 1.03c-.04.18.12.33.3.3l1.03-.21c.17-.03.33.12.3.3l-.26 1.26c-.02.09 0 .17.07.23l.14.14a.5.5 0 00.28.14l.99.14a1 1 0 001.13-1.13l-.14-.99a.5.5 0 00-.14-.28L9.68 7.56zM5.5 7a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" clip-rule="evenodd"/>
+                </svg>
+              Выбрать для покупки
+            </button>
+          </div>
+        </div> <!-- // .card content -->
+      </div>
+    </article>
+  </body>
+  </html>
