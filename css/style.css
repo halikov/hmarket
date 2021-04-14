@@ -101,6 +101,14 @@ input[type="radio"].visually-hidden {
   margin-bottom: 20px;
 }
 
+.apparts__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 178px;
+  height: 178px;
+}
+
 .apparts__reservation {
   margin-top: 20px;
 }
@@ -111,13 +119,9 @@ input[type="radio"].visually-hidden {
   border-collapse: collapse;
 }
 
-.table tbody {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
 .table__heading {
+  margin: 0;
+  margin-bottom: 16px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   line-height: 28px;
@@ -126,23 +130,19 @@ input[type="radio"].visually-hidden {
   color: #383736;
 }
 
-.apparts__media {
+.field {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.table__field {
+.field__name {
   font-size: 12px;
   line-height: 16px;
   color: #989691;
 }
 
-.table__value:not(:last-child) {
-  margin-bottom: 12px;
-}
-
-.table__value {
+.field__value {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -152,6 +152,7 @@ input[type="radio"].visually-hidden {
 
 .viewed {
   position: relative;
+  width: 185px;
   margin-bottom: 8px;  
   padding: 6px 16px 6px 36px;
 
@@ -181,6 +182,7 @@ input[type="radio"].visually-hidden {
 .accredited {
   position: relative;
   display: flex;
+  width: 250px;
   padding: 6px 16px 6px 36px;
   
   font-family: "Roboto", sans-serif;
@@ -271,36 +273,34 @@ input[type="radio"].visually-hidden {
   margin-right: 8px;
 }
 
-/* сетка  */
-
+/* сетка  media queries */
 @media(min-width: 320px) {
   .card {
     width: 304px;
     margin: 10px auto;
   }
 
-  .apparts__info {
+  .apparts {
+    display: flex;
     flex-direction: column;
   }
 
-  .apparts__info::after {
-    position: absolute;
-    bottom: -20px;
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: #f0eeeb;
+  .apparts__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .table__wrapper {
+  .table__content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    row-gap: 12px;
+    column-gap: 50px;
   }
 
-  .table__heading {
-    margin: 0;
-    margin-bottom: 16px;
+  .apparts__details {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -308,113 +308,7 @@ input[type="radio"].visually-hidden {
   .card {
     width: 712px;
   }
-
   .apparts__info {
     flex-direction: row;
-    align-items: flex-start;
-    width: 100%;
-  }
-
-  .table {
-    flex-direction: column;
-  }
-
-  .table__heading {
-    margin-bottom: 5px;
-  }
-
-  .apparts__details {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .viewed {
-    margin: 0;
-  }
-
-  .accredited {
-    margin: 0;
-    margin-left: 16px;
-  }
-
-  .apparts__reservation {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%; 
-  }
-
-  .reservation__text {
-    max-width: 240px;
-  }
-}
-
-@media(min-width: 920px) {
-  .card {
-    width: 864px;
-  }
-
-  .card__content {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-
-  .apparts__desc {
-    width: 240px;
-  }
-
-  .apparts__info {
-    flex-direction: row;
-    align-items: flex-start;
-    width: calc(864px - 332px);
-    margin: 0;
-  }
-
-  .apparts__info::after {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 100%;
-  }
-
-  .table {
-    width: auto;
-  }
-
-  .table {
-    flex-direction: column;
-  }
-
-  .apparts__details {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .viewed {
-    width: 190px;
-    margin: 0;
-    margin-bottom: 20px;
-  }
-
-  .accredited {
-    min-width: 250px;
-    margin: 0;
-  }
-
-  .apparts__reservation {
-    display: flex;
-    flex-direction: column;
-    width: 330px; 
-    padding: 24px 32px;
-    margin: 0;
-  }
-
-  .reservation__text {
-    max-width: 240px;
-  }
-
-  .btn {
-    margin: 0;
-    margin-top: auto;
   }
 }
