@@ -1,3 +1,19 @@
+/* Цвета */
+:root {
+  --btn-color: rgba(250, 198, 45, 1);
+  --btn-hover-color: rgba(240, 181, 5, 1);
+  --btn-active-color: rgba(225, 171, 8, 1);
+  --gray-40: rgba(245, 244, 242, 1);
+  --gray-100: rgba(231, 228, 222, 1); 
+  --gray-300: rgba(178, 176, 171, 1);
+  --gray-400:  rgba(152, 150, 145, 1);
+  --gray-750: rgba(56, 55, 54, 1);
+  --blue-500: rgba(39, 148, 219, 1);
+  --green-500: rgba(100, 184, 81, 1);
+  --green-20: rgba(242, 250, 240, 1);
+  --red-500: rgba(235, 75, 81, 1);
+  --red-20: rgba(250, 240, 240, 1);
+}
 /* Блочная модель */
 *,
 *::before,
@@ -10,6 +26,7 @@ body {
   padding: 0;
   font-family: "Roboto", sans-serif;
 
+  color: var(--gray-750);
   background-color: #e5e5e5;
 }
 
@@ -63,11 +80,11 @@ input[type="radio"].visually-hidden {
 
 .card__close:hover,
 .card__close:focus {
-  background-color: rgba(245,244,242,1);
+  background-color: var(--gray-40);
 }
 
 .card__close:active {
-  background-color: rgba(231,228,222,1);
+  background-color: var(--gray-100);
 }
 
 .card__close-icon {
@@ -76,16 +93,16 @@ input[type="radio"].visually-hidden {
 }
 
 .card__close path {
-  fill: rgba(178, 176, 171, 1);
+  fill: var(--gray-300);
 }
 
 .card__close:hover path {
-  fill: rgba(56, 55, 54, 1);
+  fill: var(--gray-750);
 }
 
 
 .card__close:active path {
-  fill: rgba(56, 55, 54, 1);
+  fill: var(--gray-750);
 }
 
 /* Контент карточки */
@@ -110,6 +127,7 @@ input[type="radio"].visually-hidden {
 }
 
 .apparts__reservation {
+  position: relative;
   margin-top: 20px;
 }
 
@@ -126,7 +144,7 @@ input[type="radio"].visually-hidden {
   line-height: 28px;
   font-size: 20px;
   text-align: left;
-  color: #383736;
+  color: var(--gray-750);
 }
 
 .field {
@@ -138,7 +156,7 @@ input[type="radio"].visually-hidden {
 .field__name {
   font-size: 12px;
   line-height: 16px;
-  color: #989691;
+  color: var(--gray-400);
 }
 
 .field__value {
@@ -146,7 +164,7 @@ input[type="radio"].visually-hidden {
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  color: #383736;
+  color: var(--gray-750);
 }
 
 .viewed {
@@ -159,10 +177,10 @@ input[type="radio"].visually-hidden {
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
-  color: #64B851;
+  color: var(--green-500);
 
   border-radius: 22px;
-  background: #f2fAf0;
+  background-color: var(--green-20);
 }
 
 .viewed::before {
@@ -188,9 +206,9 @@ input[type="radio"].visually-hidden {
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
-  color: #eb4b51;
+  color: var(--red-500);
 
-  background: #fAf0f0;
+  background: var(--red-20);
   border-radius: 22px;
 }
 
@@ -214,12 +232,12 @@ input[type="radio"].visually-hidden {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   line-height: 20px;
-  color: #989691;  
+  color: var(--gray-400);  
 }
 
 .reservation__untill {
   font-weight: 500;
-  color: #2794db;
+  color: var(--blue-500);
 }
 
 .reservation__summ {
@@ -230,13 +248,13 @@ input[type="radio"].visually-hidden {
   font-weight: 700;
   font-size: 20px;
   line-height: 28px;
-  color: #383736;
+  color: var(--gray-750);
 }
 
 .reservation__discount {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  color: #eb4b51;
+  color: var(--red-500);
 }
 
 /* Кнопка покупки */
@@ -251,25 +269,39 @@ input[type="radio"].visually-hidden {
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  color: #383736;
+  color: var(--gray-750);
  
   border: none;
   border-radius: 6px;
-  background: rgba(250, 198, 45, 1);
+  background: var(--btn-color);
 }
 
 .btn:hover {
-  background-color: rgba(240, 181, 5, 1);
+  background-color: var(--btn-hover-color);
 }
 
 .btn:active {
-  background-color: rgba(225, 171, 8, 1);
+  background-color: var(--btn-active-color);
 }
 
 .btn__icon {
   width: 16px;
   height: 16px;
   margin-right: 8px;
+}
+
+/* Разделительная полоса */
+.apparts__reservation::before {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+
+  background-color: rgba(240, 238, 235, 1);
 }
 
 /* сетка  media queries */
@@ -388,5 +420,37 @@ input[type="radio"].visually-hidden {
   .reservation__btn {
     width: 100%;
     margin-top: auto;
+  }
+
+  .apparts__reservation::before {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+  }
+}
+
+/* Media 1280 */
+@media(min-width: 1280px) {
+  .card {
+    width: 1200px;
+  }
+
+  .table {
+    width: auto;
+  }
+
+  .table__content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .apparts__details {
+    flex-direction: row;
+  }
+
+  .viewed {
+    margin-bottom: 0;
+    margin-right: 16px;
   }
 }
