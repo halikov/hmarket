@@ -147,6 +147,7 @@ input[type="radio"].visually-hidden {
   color: var(--gray-750);
 }
 
+/* Field ячейки таблицы данных квартиры */
 .field {
   display: flex;
   flex-direction: column;
@@ -167,6 +168,7 @@ input[type="radio"].visually-hidden {
   color: var(--gray-750);
 }
 
+/* Строка о просмотре квартиры */
 .viewed {
   position: relative;
   width: 185px;
@@ -196,6 +198,7 @@ input[type="radio"].visually-hidden {
   background-position: center;
 }
 
+/* Сообдение от банка */
 .accredited {
   position: relative;
   display: flex;
@@ -290,167 +293,95 @@ input[type="radio"].visually-hidden {
   margin-right: 8px;
 }
 
-/* Разделительная полоса */
-.apparts__reservation::before {
-  position: absolute;
-  top: -20px;
-  left: 0;
-  right: 0;
-  content: "";
-  display: block;
+.divider {
   width: 100%;
   height: 1px;
-
-  background-color: rgba(240, 238, 235, 1);
+  background-color: var(--gray-40);
 }
 
 /* сетка  media queries */
-@media(min-width: 320px) {
-  .card {
-    width: 304px;
-    margin: 10px auto;
-  }
-
-  .card__content {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .apparts__info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .table__content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 12px;
-    column-gap: 50px;
-  }
-
-  .apparts__details {
-    display: flex;
-    flex-direction: column;
-  }
+.card {
+  margin: 10px auto;
 }
 
-/* Media 768 */
-@media(min-width: 768px) {
-  .card {
-    width: 712px;
-  }
-
-  .card__content {
-    align-items: flex-start;
-  }
-
-  .apparts__info {
-    flex-direction: row;
-    align-items: flex-start;
-    width: 100%;
-  }
-
-  .apparts__media {
-    margin: 0;
-    margin-right: 32px;
-  }
-
-  .table {
-    width: 250px;
-    margin-bottom: 18px;
-  }
-
-  .apparts__details {
-    flex-direction: row;
-  }
-
-  .viewed {
-    margin: 0;
-    margin-right: 16px;
-  }
-
-  .apparts__reservation {
-    width: 100%;
-    margin-top: 24px;
-  }
-
-  .reservation__text {
-    max-width: 240px;
-  }
+.card__content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
-/* Media 920 */
-@media(min-width: 920px) {
-  .card {
-    width: 864px;
-  }
+.apparts__info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
 
+.table__content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 12px;
+  column-gap: 50px;
+  max-width: 450px; 
+}
+
+.field {
+  width: 100px;
+}
+
+.apparts__details {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--gray-100);
+}
+
+@media(min-width: 1020px) {
   .card__content {
-    flex-direction: row;
     align-items: stretch;
   }
 
   .apparts__info {
-    width: calc(100% - 332px);
-    margin-bottom: 0;
+    margin: 0;
   }
 
-  .apparts_desc {
-    padding: 24px 0;
+  .apparts__desc {
+    padding-right: 20px;
   }
-
-  .apparts__details {
-    flex-direction: column;
-  }
-
-  .viewed {
-    margin-right: 0;
-    margin-bottom: 12px;
+  
+  .divider {
+    display: none;
   }
 
   .apparts__reservation {
+    position: relative;
     display: flex;
     flex-direction: column;
-    width: 332px;
     margin: 0;
-    padding: 0 32px;
-  }
-
-  .reservation__btn {
-    width: 100%;
-    margin-top: auto;
   }
 
   .apparts__reservation::before {
+    position: absolute;
     top: 0;
-    bottom: 0;
-    left: 0;
+    left: -20px;
+    content: "";
     width: 1px;
     height: 100%;
-  }
-}
-
-/* Media 1280 */
-@media(min-width: 1280px) {
-  .card {
-    width: 1200px;
+    background-color: var(--gray-100);
   }
 
-  .table {
-    width: auto;
-  }
-
-  .table__content {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .apparts__details {
-    flex-direction: row;
-  }
-
-  .viewed {
+  .reservation__btn {
     margin-bottom: 0;
-    margin-right: 16px;
+    margin-top: auto;
   }
 }
